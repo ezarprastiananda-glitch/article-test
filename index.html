@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
 
@@ -15,17 +18,57 @@
             <nav>
                 <ul>
                     <li><a href="#">Home </a></li>
-                    <li><a href="#">Main </a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#main">Main </a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
         <div class="hero img"></div>
 
-        <main></main>
+        <main id="main">
+            <section class="content">
+                <h2>Judul Article</h2>
+                <p class="penulis"><a href="#">Ezar Prastia Nanda</a>, (2026)</p>
 
-        <footer></footer>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fugit nesciunt, nostrum labore quasi doloribus reiciendis omnis soluta eos nemo debitis quibusdam rerum eveniet aliquid nihil dolore, cupiditate corrupti et atque architecto magnam voluptatibus.</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut vitae rerum blanditiis dicta aperiam facere, exercitationem dignissimos provident, doloribus consectetur, temporibus voluptatibus. A dolor error assumenda suscipit natus? Optio sunt aliquam adipisci saepe, ad magnam?</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum nam hic non labore saepe optio accusantium illum quo officiis. Possimus ex, sunt suscipit, cumque ea provident nesciunt, repudiandae hic dolor aperiam dolore? Voluptate nobis quia in. Perferendis temporibus sapiente laboriosam, culpa aperiam ab ex deserunt voluptate tenetur libero dolores pariatur officiis, corporis velit maxime quos non perspiciatis facere quia fuga ut eligendi ullam! Excepturi, sequi cumque. Error, quaerat adipisci! Fugit sit omnis praesentium perferendis minima optio adipisci, minus dolore quas placeat ipsam eos repudiandae obcaecati fugiat, labore dolorem. Obcaecati eaque expedita libero laboriosam velit? Corporis id quo minima est.
+                </p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nam ipsa veniam, saepe unde tempore mollitia, iusto explicabo dolore similique suscipit eius provident, praesentium possimus? Similique, delectus illum mollitia itaque nemo exercitationem aut facilis quaerat sit, officiis fugit libero? Voluptatibus.</p>
+            </section>
+        </main>
+
+        <footer>
+
+            <div id="contact" class="contact">
+                <p>
+                    <i data-feather="phone"></i> : 
+                    <a href="https://wa.me/6289678889840" target="_blank" rel="noopener noreferrer">0896-7888-9840</a>
+                </p>
+
+                <p>
+                    <i data-feather="instagram"></i> :
+                    <a href="https://www.instagram.com/bangpras._/" target="_blank" rel="noopener noreferrer">@bangpras._</a>
+                </p>
+            </div>
+
+            <div class="copy">
+                <p>Copyright &copy; 2026 <a href="#">Ezar Prastia Nanda</a>. All Rights Reserved</p>
+            </div>
+            
+        </footer>
     </div>
+
+    <div id="up" class="up">
+        <a href="#"><i data-feather="arrow-up" class="arrow"></i></a>
+    </div>
+
+    <script>
+      feather.replace();
+    </script>
 </body>
 </html>

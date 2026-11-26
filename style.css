@@ -27,7 +27,7 @@ table {
 
 body {
     font: 1rem/1.6rem arial, sans-serif;
-    background-color: #eaeaea;
+    background-image: url(images/rough_diagonal.webp);
     color: #333;
     margin: 0;
     padding: 0;
@@ -57,13 +57,26 @@ header li {
     margin-right: 10px;
 }
 
-header a {
+nav a {
+    position: relative;
     text-decoration: none;
     color: var(--color);
 }
 
-header a:hover {
-    border-bottom: 2px solid var(--color);
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 .hero {
@@ -72,4 +85,118 @@ header a:hover {
     background-position: 0 -100px;
     border-top: 10px solid var(--color);
     border-bottom: 10px solid var(--color);
+}
+
+main {
+    padding: 0 20px;
+}
+
+main h2 {
+    font-size: 1.6rem;
+}
+
+main .content .penulis, .penulis a {
+    font-size: 0.7rem;
+    margin-top: -1rem;
+}
+
+main .penulis a {
+    color: var(--color);
+    text-decoration: none;
+}
+
+main .penulis a:hover {
+    border-bottom: 1px solid var(--color);
+}
+
+.content p {
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-top: 10px solid var(--color);
+    
+}
+
+.contact p{
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;   /* ikon dan teks sejajar vertikal */
+    gap: 10px;             /* jarak ikon ke teks */
+    margin: 8px 0;
+}
+
+.contact .feather {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;        /* ikon tidak mengecil saat teks panjang */
+}
+
+.contact a {
+    position: relative;
+    color: var(--color);
+    text-decoration: none;
+}
+
+.contact a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.contact a:hover::after {
+    width: 100%;
+}
+
+/* .phone {
+    width: 20px;
+}
+
+.instagram {
+    width: 20px;
+} */
+
+.copy {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.copy a {
+    color: var(--color);
+    text-decoration: none;
+}
+
+.copy a:hover {
+    /* border-bottom: 1px solid var(--color); */
+    text-decoration: underline;
+}
+
+.up {
+    background-color: #333;
+    border-radius: 50%;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+
+.arrow {
+    padding: 10px 10px 8px 10px;
+    width: 50px;
+    height: 40px;
+    color: white;
+}
+
+.arrow:hover {
+    color: var(--color);
 }
