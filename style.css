@@ -34,12 +34,14 @@ body {
     box-sizing: border-box;
 }
 
+/* CONTAINER */
 .container {
-    width: 800px;
+    width: 960px;
     margin: auto;
     background-color: white;
 }
 
+/* HEADER & NAV */
 header {
     padding: 20px 20px 10px 20px;
 }
@@ -79,23 +81,32 @@ nav a:hover::after {
     width: 100%;
 }
 
+/* HERO */
 .hero {
-    height: 400px;
+    height: 600px;
     background: url(images/hero.png) center / cover no-repeat;
-    background-position: 0 -100px;
+    background-position: 0 -38px;
     border-top: 10px solid var(--color);
     border-bottom: 10px solid var(--color);
 }
 
-main {
+/* MAIN */
+.content {
     padding: 0 20px;
+}
+
+main {
+    width: 600px;
+    padding: 0 20px 0 0;
+    box-sizing: border-box;
+    float: left;
 }
 
 main h2 {
     font-size: 1.6rem;
 }
 
-main .content .penulis, .penulis a {
+main .penulis, .penulis a {
     font-size: 0.7rem;
     margin-top: -1rem;
 }
@@ -109,11 +120,43 @@ main .penulis a:hover {
     border-bottom: 1px solid var(--color);
 }
 
-.content p {
+main p {
     text-align: justify;
     font-size: 0.9rem;
 }
 
+/* ASIDE */
+aside {
+    width: 300px;
+    height: 100%;
+    background-color: #565656;
+    float: right;
+    box-sizing: border-box;
+    padding: 0 20px 0 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+aside h3 {
+    font-weight: bold;
+    color: white;
+}
+
+aside img {
+    border-radius: 50%;
+    width: 70px;
+    margin-top: -0.5rem;
+    float: left;
+    margin: 5px 15px 3px 0;
+}
+
+aside p {
+    text-align: justify;
+    font: 0.6rem/18px arial;
+    color: white;
+}
+
+/* FOOTER */
 footer {
     background-color: #333;
     color: white;
@@ -122,12 +165,17 @@ footer {
     
 }
 
+.contact {
+    width: 400px;
+}
+
 .contact p{
     font-size: 0.8rem;
     display: flex;
-    align-items: center;   /* ikon dan teks sejajar vertikal */
+    align-items: baseline;   /* ikon dan teks sejajar vertikal */
     gap: 10px;             /* jarak ikon ke teks */
     margin: 8px 0;
+    text-align: justify;
 }
 
 .contact .feather {
@@ -157,14 +205,6 @@ footer {
 .contact a:hover::after {
     width: 100%;
 }
-
-/* .phone {
-    width: 20px;
-}
-
-.instagram {
-    width: 20px;
-} */
 
 .copy {
     margin-top: 3rem;
@@ -199,4 +239,24 @@ footer {
 
 .arrow:hover {
     color: var(--color);
+}
+
+/* clearfix */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    zoom: 1;
 }
